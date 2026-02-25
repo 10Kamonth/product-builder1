@@ -13,9 +13,9 @@ const translations = {
         theme_light: "라이트 모드",
         footer_name: "나노 바나나 스튜디오",
         products: [
-            { name: "나노 바나나 청자 에디션", price: "450,000원", image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=2030&auto=format&fit=crop" },
-            { name: "나노 바나나 백자 달항아리", price: "650,000원", image: "https://images.unsplash.com/photo-1594283359529-875151240409?q=80&w=1974&auto=format&fit=crop" },
-            { name: "나노 바나나 분청사기 한정판", price: "380,000원", image: "https://images.unsplash.com/photo-1587334274328-64186a80aeee?q=80&w=2081&auto=format&fit=crop" }
+            { name: "나노 바나나 청자 에디션", price: "450,000원", image: "https://images.unsplash.com/photo-1590117324103-88846c92d54e?q=80&w=2070&auto=format&fit=crop" },
+            { name: "나노 바나나 백자 달항아리", price: "650,000원", image: "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=2070&auto=format&fit=crop" },
+            { name: "나노 바나나 분청사기 한정판", price: "380,000원", image: "https://images.unsplash.com/photo-1528821128474-27fcafee3b2c?q=80&w=2070&auto=format&fit=crop" }
         ]
     },
     en: {
@@ -32,9 +32,9 @@ const translations = {
         theme_light: "Light Mode",
         footer_name: "Nano Banana Studio",
         products: [
-            { name: "Nano Banana Celadon Edition", price: "₩450,000", image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=2030&auto=format&fit=crop" },
-            { name: "Nano Banana Moon Jar Edition", price: "₩650,000", image: "https://images.unsplash.com/photo-1594283359529-875151240409?q=80&w=1974&auto=format&fit=crop" },
-            { name: "Nano Banana Buncheong Limited", price: "₩380,000", image: "https://images.unsplash.com/photo-1587334274328-64186a80aeee?q=80&w=2081&auto=format&fit=crop" }
+            { name: "Nano Banana Celadon Edition", price: "₩450,000", image: "https://images.unsplash.com/photo-1590117324103-88846c92d54e?q=80&w=2070&auto=format&fit=crop" },
+            { name: "Nano Banana Moon Jar Edition", price: "₩650,000", image: "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=2070&auto=format&fit=crop" },
+            { name: "Nano Banana Buncheong Limited", price: "₩380,000", image: "https://images.unsplash.com/photo-1528821128474-27fcafee3b2c?q=80&w=2070&auto=format&fit=crop" }
         ]
     },
     ja: {
@@ -51,9 +51,9 @@ const translations = {
         theme_light: "ライトモード",
         footer_name: "ナノバナナスタジオ",
         products: [
-            { name: "ナノバナナ青磁エディション", price: "450,000ウォン", image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=2030&auto=format&fit=crop" },
-            { name: "ナノバナナ白磁月壺", price: "650,000ウォン", image: "https://images.unsplash.com/photo-1594283359529-875151240409?q=80&w=1974&auto=format&fit=crop" },
-            { name: "ナノバナナ粉青沙器限定版", price: "380,000ウォン", image: "https://images.unsplash.com/photo-1587334274328-64186a80aeee?q=80&w=2081&auto=format&fit=crop" }
+            { name: "ナノバナナ青磁エディション", price: "450,000ウォン", image: "https://images.unsplash.com/photo-1590117324103-88846c92d54e?q=80&w=2070&auto=format&fit=crop" },
+            { name: "ナノバナナ白磁月壺", price: "650,000ウォン", image: "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=2070&auto=format&fit=crop" },
+            { name: "ナノバナナ粉青沙器限定版", price: "380,000ウォン", image: "https://images.unsplash.com/photo-1528821128474-27fcafee3b2c?q=80&w=2070&auto=format&fit=crop" }
         ]
     }
 };
