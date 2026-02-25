@@ -21,31 +21,81 @@ class ProductCard extends HTMLElement {
             .product-card {
                 background-color: var(--card-bg, white);
                 color: var(--text-color, #333);
-                border: 1px solid var(--card-border, #e0e0e0);
-                border-radius: 8px;
-                padding: 20px;
-                text-align: center;
-                box-shadow: 0 4px 8px var(--shadow-color, rgba(0,0,0,0.1));
-                transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+                border: 1px solid var(--card-border, transparent);
+                border-radius: 12px;
+                padding: 0;
+                text-align: left;
+                box-shadow: 0 10px 30px var(--shadow-color, rgba(0,0,0,0.05));
+                transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
             }
 
             .product-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 16px var(--shadow-color, rgba(0,0,0,0.2));
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px var(--shadow-color, rgba(0,0,0,0.1));
+            }
+
+            .image-container {
+                width: 100%;
+                padding-top: 100%; /* 1:1 Aspect Ratio */
+                position: relative;
+                overflow: hidden;
+                background-color: #f0f0f0;
             }
 
             .product-card img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s ease;
+            }
+
+            .product-card:hover img {
+                transform: scale(1.05);
+            }
+
+            .content {
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+            }
+
+            h3 {
+                font-family: var(--font-serif, 'Nanum Myeongjo', serif);
+                font-size: 1.1rem;
+                margin: 0 0 0.5rem 0;
+                font-weight: 600;
+            }
+
+            p {
+                color: var(--accent-color, #8d6e63);
+                font-weight: 500;
+                margin: auto 0 0 0;
+                font-size: 1rem;
             }
         `;
 
+        const content = document.createElement('div');
+        content.setAttribute('class', 'content');
+        
+        const imageContainer = document.createElement('div');
+        imageContainer.setAttribute('class', 'image-container');
+        
+        imageContainer.appendChild(image);
+        content.appendChild(name);
+        content.appendChild(price);
+
         shadow.appendChild(style);
         shadow.appendChild(wrapper);
-        wrapper.appendChild(image);
-        wrapper.appendChild(name);
-        wrapper.appendChild(price);
+        wrapper.appendChild(imageContainer);
+        wrapper.appendChild(content);
     }
 }
 
