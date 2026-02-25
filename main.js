@@ -1,59 +1,59 @@
 const translations = {
     ko: {
-        page_title: "한국 도자기",
-        logo: "한국 도자기",
+        page_title: "나노 바나나 콜렉션",
+        logo: "Nano Banana",
         nav_home: "홈",
         nav_products: "제품",
         nav_about: "소개",
         nav_contact: "문의",
-        hero_title: "아름다운 한국의 미",
-        hero_subtitle: "전통과 현대가 어우러진 특별한 도자기를 만나보세요.",
-        products_title: "추천 제품",
+        hero_title: "미래를 여는 나노 바나나",
+        hero_subtitle: "최첨단 나노 기술과 예술이 결합된 특별한 바나나를 만나보세요.",
+        products_title: "나노 바나나 시리즈",
         theme_dark: "다크 모드",
         theme_light: "라이트 모드",
-        footer_name: "한국 도자기",
+        footer_name: "나노 바나나 스튜디오",
         products: [
-            { name: "청자 상감 운학문 매병", price: "350,000원", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" },
-            { name: "백자 달항아리", price: "550,000원", image: "https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop" },
-            { name: "분청사기 박지철채화문 병", price: "280,000원", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" }
+            { name: "나노 바나나 청자 에디션", price: "450,000원", image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=2030&auto=format&fit=crop" },
+            { name: "나노 바나나 백자 달항아리", price: "650,000원", image: "https://images.unsplash.com/photo-1594283359529-875151240409?q=80&w=1974&auto=format&fit=crop" },
+            { name: "나노 바나나 분청사기 한정판", price: "380,000원", image: "https://images.unsplash.com/photo-1587334274328-64186a80aeee?q=80&w=2081&auto=format&fit=crop" }
         ]
     },
     en: {
-        page_title: "Korean Pottery",
-        logo: "K-Pottery",
+        page_title: "Nano Banana Collection",
+        logo: "Nano Banana",
         nav_home: "Home",
         nav_products: "Products",
         nav_about: "About",
         nav_contact: "Contact",
-        hero_title: "The Beauty of Korea",
-        hero_subtitle: "Discover special pottery where tradition meets modernity.",
-        products_title: "Featured Collections",
+        hero_title: "Nano Banana: The Future",
+        hero_subtitle: "Discover special bananas where cutting-edge nano-tech meets art.",
+        products_title: "Nano Banana Series",
         theme_dark: "Dark Mode",
         theme_light: "Light Mode",
-        footer_name: "Korean Pottery Studio",
+        footer_name: "Nano Banana Studio",
         products: [
-            { name: "Celadon Prunus Vase", price: "₩350,000", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" },
-            { name: "White Porcelain Moon Jar", price: "₩550,000", image: "https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop" },
-            { name: "Buncheong Decorated Jar", price: "₩280,000", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" }
+            { name: "Nano Banana Celadon Edition", price: "₩450,000", image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=2030&auto=format&fit=crop" },
+            { name: "Nano Banana Moon Jar Edition", price: "₩650,000", image: "https://images.unsplash.com/photo-1594283359529-875151240409?q=80&w=1974&auto=format&fit=crop" },
+            { name: "Nano Banana Buncheong Limited", price: "₩380,000", image: "https://images.unsplash.com/photo-1587334274328-64186a80aeee?q=80&w=2081&auto=format&fit=crop" }
         ]
     },
     ja: {
-        page_title: "韓国の陶磁器",
-        logo: "韓国陶磁器",
+        page_title: "ナノバナナコレクション",
+        logo: "Nano Banana",
         nav_home: "ホーム",
         nav_products: "製品",
         nav_about: "紹介",
         nav_contact: "お問い合わせ",
-        hero_title: "美しい韓国の美",
-        hero_subtitle: "伝統と現代が調和した特別な陶磁器に出会ってください。",
-        products_title: "おすすめ商品",
+        hero_title: "未来を創るナノバナナ",
+        hero_subtitle: "最先端ナノ技術と芸術が融合した特別なバナナに出会ってください。",
+        products_title: "ナノバナナシリーズ",
         theme_dark: "ダークモード",
         theme_light: "ライトモード",
-        footer_name: "韓国陶磁器工房",
+        footer_name: "ナノバナナスタジオ",
         products: [
-            { name: "青磁象嵌雲鶴文梅瓶", price: "350,000ウォン", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" },
-            { name: "白磁月壺", price: "550,000ウォン", image: "https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop" },
-            { name: "粉青沙器剥地鉄彩花文瓶", price: "280,000ウォン", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" }
+            { name: "ナノバナナ青磁エディション", price: "450,000ウォン", image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=2030&auto=format&fit=crop" },
+            { name: "ナノバナナ白磁月壺", price: "650,000ウォン", image: "https://images.unsplash.com/photo-1594283359529-875151240409?q=80&w=1974&auto=format&fit=crop" },
+            { name: "ナノバナナ粉青沙器限定版", price: "380,000ウォン", image: "https://images.unsplash.com/photo-1587334274328-64186a80aeee?q=80&w=2081&auto=format&fit=crop" }
         ]
     }
 };
