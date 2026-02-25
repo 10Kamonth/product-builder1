@@ -3,47 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국 도자기</title>
+    <title data-i18n="page_title">한국 도자기</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>한국 도자기</h1>
+        <h1 data-i18n="logo">한국 도자기</h1>
         <div class="header-controls">
             <div id="clock" class="clock"></div>
+            <div class="language-selector">
+                <button class="lang-btn" data-lang="ko">KR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ja">JP</button>
+            </div>
             <div class="theme-toggle">
-                <button id="theme-btn">다크 모드</button>
+                <button id="theme-btn" data-i18n="theme_dark">다크 모드</button>
             </div>
         </div>
         <nav>
             <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">제품</a></li>
-                <li><a href="#">소개</a></li>
-                <li><a href="#">문의</a></li>
+                <li><a href="#" data-i18n="nav_home">홈</a></li>
+                <li><a href="#" data-i18n="nav_products">제품</a></li>
+                <li><a href="#" data-i18n="nav_about">소개</a></li>
+                <li><a href="#" data-i18n="nav_contact">문의</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h2>아름다운 한국의 미</h2>
-            <p>전통과 현대가 어우러진 특별한 도자기를 만나보세요.</p>
+            <h2 data-i18n="hero_title">아름다운 한국의 미</h2>
+            <p data-i18n="hero_subtitle">전통과 현대가 어우러진 특별한 도자기를 만나보세요.</p>
         </section>
 
         <section class="products">
-            <h2>추천 제품</h2>
-            <div class="product-grid">
-                <product-card name="청자 상감 운학문 매병" price="350,000원" image="https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></product-card>
-                <product-card name="백자 달항아리" price="550,000원" image="https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></product-card>
-                <product-card name="분청사기 박지철채화문 병" price="280,000원" image="https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></product-card>
+            <h2 data-i18n="products_title">추천 제품</h2>
+            <div class="product-grid" id="product-list">
+                <!-- Products will be dynamically rendered for i18n support -->
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 한국 도자기</p>
+        <p>&copy; 2024 <span data-i18n="footer_name">한국 도자기</span></p>
     </footer>
 
     <script src="main.js"></script>
