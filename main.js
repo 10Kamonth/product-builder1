@@ -202,9 +202,22 @@ const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') document.body.setAttribute('data-theme', 'dark');
 
 function updateClock() {
-    const clockElement = document.getElementById('clock');
+    const hourHand = document.getElementById('hour-hand');
+    const minuteHand = document.getElementById('minute-hand');
+    const secondHand = document.getElementById('second-hand');
+    
     const now = new Date();
-    clockElement.textContent = now.toLocaleString(currentLang === 'ko' ? 'ko-KR' : (currentLang === 'ja' ? 'ja-JP' : 'en-US'));
+    const seconds = now.getSeconds();
+    const minutes = now.getMinutes();
+    const hours = now.getHours();
+
+    const secondDegrees = (seconds / 60) * 360;
+    const minuteDegrees = ((minutes + seconds / 60) / 60) * 360;
+    const hourDegrees = ((hours % 12 + minutes / 60) / 12) * 360;
+
+    secondHand.style.transform = `translateX(-50%) rotate(${secondDegrees}deg)`;
+    minuteHand.style.transform = `translateX(-50%) rotate(${minuteDegrees}deg)`;
+    hourHand.style.transform = `translateX(-50%) rotate(${hourDegrees}deg)`;
 }
 
 setInterval(updateClock, 1000);
