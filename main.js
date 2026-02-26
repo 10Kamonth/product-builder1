@@ -12,10 +12,29 @@ const translations = {
         theme_dark: "다크 모드",
         theme_light: "라이트 모드",
         footer_name: "한국 도자기",
+        back_to_list: "목록으로 돌아가기",
         products: [
-            { name: "청자 상감 운학문 매병", price: "350,000원", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" },
-            { name: "백자 달항아리", price: "550,000원", image: "https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop" },
-            { name: "분청사기 박지철채화문 병", price: "280,000원", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" }
+            { 
+                id: 1,
+                name: "청자 상감 운학문 매병", 
+                price: "350,000원", 
+                image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop",
+                description: "청자 상감 운학문 매병은 고려 시대의 대표적인 청자로, 구름 사이를 날아가는 학의 모습을 정교한 상감 기법으로 표현한 걸작입니다. 우아한 곡선과 비색의 아름다움을 느껴보세요."
+            },
+            { 
+                id: 2,
+                name: "백자 달항아리", 
+                price: "550,000원", 
+                image: "https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop",
+                description: "백자 달항아리는 보름달처럼 넉넉하고 둥근 형태가 특징인 조선 시대의 대표적 백자입니다. 아무런 장식 없이 백색의 순수함과 절제미를 강조하여 현대적인 공간에도 잘 어우러집니다."
+            },
+            { 
+                id: 3,
+                name: "분청사기 박지철채화문 병", 
+                price: "280,000원", 
+                image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop",
+                description: "분청사기 박지철채화문 병은 자유분방하고 해학적인 아름다움을 지닌 도자기입니다. 표면을 깎아내고 철채를 더해 강렬한 생명력과 소박한 멋을 동시에 보여줍니다."
+            }
         ]
     },
     en: {
@@ -31,10 +50,29 @@ const translations = {
         theme_dark: "Dark Mode",
         theme_light: "Light Mode",
         footer_name: "Korean Pottery Studio",
+        back_to_list: "Back to List",
         products: [
-            { name: "Celadon Prunus Vase", price: "₩350,000", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" },
-            { name: "White Porcelain Moon Jar", price: "₩550,000", image: "https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop" },
-            { name: "Buncheong Decorated Jar", price: "₩280,000", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" }
+            { 
+                id: 1,
+                name: "Celadon Prunus Vase", 
+                price: "₩350,000", 
+                image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop",
+                description: "The Celadon Prunus Vase is a representative Goryeo-era masterpiece. It features delicate crane and cloud patterns created using the sanggam (inlay) technique, showcasing elegant curves and jade-green beauty."
+            },
+            { 
+                id: 2,
+                name: "White Porcelain Moon Jar", 
+                price: "₩550,000", 
+                image: "https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop",
+                description: "The Moon Jar is a iconic Joseon-dynasty white porcelain known for its generous, round shape resembling a full moon. Its pure white color and understated beauty harmonize with modern spaces."
+            },
+            { 
+                id: 3,
+                name: "Buncheong Decorated Jar", 
+                price: "₩280,000", 
+                image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop",
+                description: "This Buncheong jar possesses a free-spirited and humorous beauty. The combination of carved surfaces and iron painting creates a vibrant yet rustic charm unique to Korean aesthetics."
+            }
         ]
     },
     ja: {
@@ -50,10 +88,29 @@ const translations = {
         theme_dark: "ダークモード",
         theme_light: "ライトモード",
         footer_name: "韓国陶磁器工房",
+        back_to_list: "一覧に戻る",
         products: [
-            { name: "青磁象嵌雲鶴文梅瓶", price: "350,000ウォン", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" },
-            { name: "白磁月壺", price: "550,000ウォン", image: "https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop" },
-            { name: "粉青沙器剥地철채화문병", price: "280,000ウォン", image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop" }
+            { 
+                id: 1,
+                name: "青磁象嵌雲鶴文梅瓶", 
+                price: "350,000ウォン", 
+                image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop",
+                description: "高麗時代の代表的な青磁で、雲の間を飛ぶ鶴の姿を精巧な象嵌技法で表現した名作です。優雅な曲線と翡翠色の美しさを感じてください。"
+            },
+            { 
+                id: 2,
+                name: "白磁月壺", 
+                price: "550,000ウォン", 
+                image: "https://images.unsplash.com/photo-1615325852939-715c5a894a4a?q=80&w=2070&auto=format&fit=crop",
+                description: "満月のような豊かで丸い形が特徴の、朝鮮時代を代表する白磁です。装飾을 배제한 白色の純粋さと節制美は、現代の空間にもよく馴染みます。"
+            },
+            { 
+                id: 3,
+                name: "粉青沙器剥地철채화문병", 
+                price: "280,000ウォン", 
+                image: "https://images.unsplash.com/photo-1578973625969-8e12d4d124d7?q=80&w=1974&auto=format&fit=crop",
+                description: "自由奔放でユーモラスな美しさを持つ陶磁器です。表面を削り取り、鉄彩を加えることで、強い生命力と素朴な趣を同時に表現しています。"
+            }
         ]
     }
 };
@@ -80,6 +137,7 @@ class ProductCard extends HTMLElement {
                 display: flex;
                 flex-direction: column;
                 height: 100%;
+                cursor: pointer;
             }
             .product-card:hover {
                 transform: translateY(-8px);
@@ -109,6 +167,14 @@ class ProductCard extends HTMLElement {
 
         shadow.appendChild(style);
         shadow.appendChild(wrapper);
+
+        wrapper.addEventListener('click', () => {
+            this.dispatchEvent(new CustomEvent('product-click', {
+                detail: { id: this.getAttribute('product-id') },
+                bubbles: true,
+                composed: true
+            }));
+        });
     }
 
     connectedCallback() {
@@ -116,7 +182,7 @@ class ProductCard extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['name', 'price', 'image'];
+        return ['name', 'price', 'image', 'product-id'];
     }
 
     attributeChangedCallback() {
@@ -143,6 +209,7 @@ customElements.define('product-card', ProductCard);
 
 // Language & Theme State
 let currentLang = localStorage.getItem('lang') || 'ko';
+let selectedProductId = null;
 
 function updateUI() {
     // Update static text
@@ -153,16 +220,60 @@ function updateUI() {
         }
     });
 
-    // Update dynamic products
-    const productList = document.getElementById('product-list');
-    productList.innerHTML = '';
-    translations[currentLang].products.forEach(p => {
-        const card = document.createElement('product-card');
-        card.setAttribute('name', p.name);
-        card.setAttribute('price', p.price);
-        card.setAttribute('image', p.image);
-        productList.appendChild(card);
-    });
+    const productsSection = document.querySelector('.products');
+    const productDetailSection = document.getElementById('product-detail');
+    const heroSection = document.querySelector('.hero');
+
+    if (selectedProductId) {
+        const product = translations[currentLang].products.find(p => p.id == selectedProductId);
+        if (product) {
+            productsSection.style.display = 'none';
+            heroSection.style.display = 'none';
+            productDetailSection.style.display = 'block';
+            
+            productDetailSection.innerHTML = `
+                <div class="detail-container">
+                    <button class="back-btn" id="back-btn">${translations[currentLang].back_to_list}</button>
+                    <div class="detail-grid">
+                        <div class="detail-image">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <div class="detail-content">
+                            <h2>${product.name}</h2>
+                            <p class="detail-price">${product.price}</p>
+                            <p class="detail-description">${product.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('back-btn').addEventListener('click', () => {
+                selectedProductId = null;
+                updateUI();
+            });
+        }
+    } else {
+        productsSection.style.display = 'block';
+        heroSection.style.display = 'flex';
+        productDetailSection.style.display = 'none';
+
+        // Update dynamic products
+        const productList = document.getElementById('product-list');
+        productList.innerHTML = '';
+        translations[currentLang].products.forEach(p => {
+            const card = document.createElement('product-card');
+            card.setAttribute('name', p.name);
+            card.setAttribute('price', p.price);
+            card.setAttribute('image', p.image);
+            card.setAttribute('product-id', p.id);
+            card.addEventListener('product-click', (e) => {
+                selectedProductId = e.detail.id;
+                updateUI();
+                window.scrollTo(0, 0);
+            });
+            productList.appendChild(card);
+        });
+    }
 
     // Update active lang button
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -215,9 +326,9 @@ function updateClock() {
     const minuteDegrees = ((minutes + seconds / 60) / 60) * 360;
     const hourDegrees = ((hours % 12 + minutes / 60) / 12) * 360;
 
-    secondHand.style.transform = `translateX(-50%) rotate(${secondDegrees}deg)`;
-    minuteHand.style.transform = `translateX(-50%) rotate(${minuteDegrees}deg)`;
-    hourHand.style.transform = `translateX(-50%) rotate(${hourDegrees}deg)`;
+    if (secondHand) secondHand.style.transform = `translateX(-50%) rotate(${secondDegrees}deg)`;
+    if (minuteHand) minuteHand.style.transform = `translateX(-50%) rotate(${minuteDegrees}deg)`;
+    if (hourHand) hourHand.style.transform = `translateX(-50%) rotate(${hourDegrees}deg)`;
 }
 
 setInterval(updateClock, 1000);
