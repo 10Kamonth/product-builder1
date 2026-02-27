@@ -246,9 +246,47 @@ nav a:hover::after {
     animation: fadeInUp 1s ease-out 0.2s backwards;
 }
 
+/* Expertise Section (E-E-A-T) */
+.expertise {
+    padding: 5rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.expertise h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.expertise h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: var(--accent-color);
+    margin: 1rem auto 0;
+}
+
+.expertise-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.expertise-content strong {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
 /* Products Section */
 .products {
-    padding: 5rem 2rem;
+    padding: 2rem 2rem 5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -277,6 +315,66 @@ nav a:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
+}
+
+/* FAQ Section (GEO) */
+.faq {
+    padding: 5rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.faq h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: var(--accent-color);
+    margin: 1rem auto 0;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+}
+
+.faq-item h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    margin: 0 0 1rem 0;
+    color: var(--accent-color);
+}
+
+.faq-item p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
 /* Footer */
