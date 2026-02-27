@@ -12,6 +12,9 @@ const translations = {
         theme_system: "시스템 기본값",
         theme_dark: "다크 모드",
         theme_light: "라이트 모드",
+        theme_short_light: "라이트",
+        theme_short_dark: "다크",
+        theme_short_system: "자동",
         footer_name: "한국 도자기",
         back_to_list: "목록으로 돌아가기",
         products: [
@@ -51,6 +54,9 @@ const translations = {
         theme_system: "System Default",
         theme_dark: "Dark Mode",
         theme_light: "Light Mode",
+        theme_short_light: "Light",
+        theme_short_dark: "Dark",
+        theme_short_system: "Auto",
         footer_name: "Korean Pottery Studio",
         back_to_list: "Back to List",
         products: [
@@ -90,6 +96,9 @@ const translations = {
         theme_system: "システム設定",
         theme_dark: "ダークモード",
         theme_light: "ライトモード",
+        theme_short_light: "ライト",
+        theme_short_dark: "ダーク",
+        theme_short_system: "自動",
         footer_name: "韓国陶磁器工房",
         back_to_list: "一覧に戻る",
         products: [
@@ -334,9 +343,10 @@ function updateUI() {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
     });
 
-    // Update theme button text
-    const themeBtn = document.getElementById('theme-btn');
-    themeBtn.textContent = translations[currentLang][`theme_${currentTheme}`];
+    // Update active theme button
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-theme-val') === currentTheme);
+    });
 }
 
 function applyTheme(theme) {
@@ -356,19 +366,13 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
     });
 });
 
-const themeBtn = document.getElementById('theme-btn');
-themeBtn.addEventListener('click', () => {
-    if (currentTheme === 'system') {
-        currentTheme = 'light';
-    } else if (currentTheme === 'light') {
-        currentTheme = 'dark';
-    } else {
-        currentTheme = 'system';
-    }
-
-    localStorage.setItem('theme', currentTheme);
-    applyTheme(currentTheme);
-    updateUI();
+document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        currentTheme = btn.getAttribute('data-theme-val');
+        localStorage.setItem('theme', currentTheme);
+        applyTheme(currentTheme);
+        updateUI();
+    });
 });
 
 // Update automatically if system theme changes while 'system' is selected

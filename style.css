@@ -239,22 +239,39 @@ nav a:hover::after {
     justify-content: center;
 }
 
-.theme-toggle button {
-    background: transparent;
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-    padding: 0.4rem 0.8rem;
-    cursor: pointer;
+.theme-selector {
+    display: flex;
+    gap: 0.2rem;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.2rem;
     border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
 }
 
-.theme-toggle button:hover {
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    transform: translateY(-1px);
+[data-theme="dark"] .theme-selector {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.theme-btn:hover {
+    opacity: 0.8;
+}
+
+.theme-btn.active {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    opacity: 1;
 }
 
 /* Hero Section */
