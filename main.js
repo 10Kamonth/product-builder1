@@ -1,6 +1,6 @@
 const translations = {
     ko: {
-        page_title: "한국 도자기",
+        page_title: "한국 도자기 - 전통과 현대의 조화",
         logo: "한국 도자기",
         nav_home: "홈",
         nav_products: "제품",
