@@ -211,6 +211,36 @@ customElements.define('product-card', ProductCard);
 let currentLang = localStorage.getItem('lang') || 'ko';
 let selectedProductId = null;
 
+function updateMetaTags(title, description, image, url) {
+    document.title = title;
+    
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', description);
+    
+    // Update OG tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', title);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', description);
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage && image) ogImage.setAttribute('content', image);
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl && url) ogUrl.setAttribute('content', url);
+    
+    // Update Twitter tags
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', title);
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute('content', description);
+    const twImage = document.querySelector('meta[name="twitter:image"]');
+    if (twImage && image) twImage.setAttribute('content', image);
+    
+    // Update Canonical
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical && url) canonical.setAttribute('href', url);
+}
+
 function updateUI() {
     // Update static text
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -230,6 +260,14 @@ function updateUI() {
             productsSection.style.display = 'none';
             heroSection.style.display = 'none';
             productDetailSection.style.display = 'block';
+            
+            // Update URL hash for deep linking
+            window.history.replaceState(null, '', `#product-${selectedProductId}`);
+            
+            // Update SEO Metadata
+            const pageTitle = `${product.name} | ${translations[currentLang].footer_name}`;
+            const currentUrl = window.location.href;
+            updateMetaTags(pageTitle, product.description, product.image, currentUrl);
             
             productDetailSection.innerHTML = `
                 <div class="detail-container">
@@ -256,6 +294,18 @@ function updateUI() {
         productsSection.style.display = 'block';
         heroSection.style.display = 'flex';
         productDetailSection.style.display = 'none';
+        
+        // Remove hash from URL
+        if(window.location.hash) {
+            window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+        
+        // Restore Default SEO Metadata
+        const defaultTitle = translations[currentLang].page_title + (currentLang === 'ko' ? " | 청자, 백자, 분청사기" : "");
+        const defaultDesc = translations[currentLang].products.map(p => p.name).join(', ') + " 등 고품격 도자기 제품을 만나보세요.";
+        const defaultUrl = window.location.origin + window.location.pathname;
+        const defaultImg = "https://product-builder1-7f0.pages.dev/images/og-main.jpg";
+        updateMetaTags(defaultTitle, defaultDesc, defaultImg, defaultUrl);
 
         // Update dynamic products
         const productList = document.getElementById('product-list');
@@ -311,6 +361,14 @@ themeBtn.addEventListener('click', () => {
 // Initialize
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') document.body.setAttribute('data-theme', 'dark');
+
+// Check URL Hash for deep linking
+if (window.location.hash && window.location.hash.startsWith('#product-')) {
+    const hashId = parseInt(window.location.hash.replace('#product-', ''));
+    if (!isNaN(hashId)) {
+        selectedProductId = hashId;
+    }
+}
 
 function updateClock() {
     const hourHand = document.getElementById('hour-hand');
