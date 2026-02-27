@@ -166,6 +166,26 @@
 </head>
 
 <body>
+  <!-- Access Restriction Script -->
+  <script>
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      // Check if preview parameter is true or if it's already stored in session
+      if (urlParams.get('preview') === 'true' || sessionStorage.getItem('previewUnlocked')) {
+        sessionStorage.setItem('previewUnlocked', 'true');
+      } else {
+        document.body.classList.add('locked');
+      }
+    })();
+  </script>
+
+  <!-- Coming Soon Overlay -->
+  <div id="coming-soon-overlay">
+    <div class="coming-soon-content">
+      <h2 data-i18n="coming_soon_title">사이트 준비 중입니다</h2>
+      <p data-i18n="coming_soon_desc">더 나은 모습으로 찾아뵙겠습니다.</p>
+    </div>
+  </div>
   <header>
     <h1 data-i18n="logo">한국 도자기</h1>
     <div class="header-controls">

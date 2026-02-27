@@ -1,10 +1,10 @@
 User-agent: Yeti
-Allow: /
+Disallow: /
 
 User-agent: Googlebot
-Allow: /
+Disallow: /
 
 User-agent: *
-Allow: /
+Disallow: /
 
 Sitemap: https://product-builder1-7f0.pages.dev/sitemap.xml
