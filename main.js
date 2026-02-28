@@ -17,6 +17,7 @@ const translations = {
         theme_short_system: "자동",
         footer_name: "한국 도자기",
         back_to_list: "목록으로 돌아가기",
+        toast_copied: "링크가 복사되었습니다.",
         products: [
             {
                 id: 1,
@@ -59,6 +60,7 @@ const translations = {
         theme_short_system: "Auto",
         footer_name: "Korean Pottery Studio",
         back_to_list: "Back to List",
+        toast_copied: "Link copied to clipboard.",
         products: [
             {
                 id: 1,
@@ -101,6 +103,7 @@ const translations = {
         theme_short_system: "自動",
         footer_name: "韓国陶磁器工房",
         back_to_list: "一覧に戻る",
+        toast_copied: "リンクをコピーしました。",
         products: [
             {
                 id: 1,
@@ -393,25 +396,42 @@ if (window.location.hash && window.location.hash.startsWith('#product-')) {
     }
 }
 
-function updateClock() {
-    const hourHand = document.getElementById('hour-hand');
-    const minuteHand = document.getElementById('minute-hand');
-    const secondHand = document.getElementById('second-hand');
+// SNS Share Logic
+function handleShare(platform) {
+    const shareUrl = window.location.href;
+    const shareTitle = document.title;
+    const shareText = document.querySelector('meta[name="description"]')?.getAttribute('content') || shareTitle;
 
-    const now = new Date();
-    const seconds = now.getSeconds();
-    const minutes = now.getMinutes();
-    const hours = now.getHours();
+    // Use Web Share API if available (Mobile/Modern Browsers) and not copying
+    if (navigator.share && platform !== 'copy') {
+        navigator.share({
+            title: shareTitle,
+            text: shareText,
+            url: shareUrl
+        }).catch(err => console.log('Share error:', err));
+        return;
+    }
 
-    const secondDegrees = (seconds / 60) * 360;
-    const minuteDegrees = ((minutes + seconds / 60) / 60) * 360;
-    const hourDegrees = ((hours % 12 + minutes / 60) / 12) * 360;
-
-    if (secondHand) secondHand.style.transform = `translateX(-50%) rotate(${secondDegrees}deg)`;
-    if (minuteHand) minuteHand.style.transform = `translateX(-50%) rotate(${minuteDegrees}deg)`;
-    if (hourHand) hourHand.style.transform = `translateX(-50%) rotate(${hourDegrees}deg)`;
+    // Fallbacks
+    if (platform === 'twitter') {
+        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`, '_blank');
+    } else if (platform === 'facebook') {
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
+    } else if (platform === 'copy') {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        });
+    }
 }
 
-setInterval(updateClock, 1000);
-updateClock();
+document.querySelectorAll('.share-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (btn.classList.contains('twitter')) handleShare('twitter');
+        if (btn.classList.contains('facebook')) handleShare('facebook');
+        if (btn.classList.contains('copy-link')) handleShare('copy');
+    });
+});
+
 updateUI();
