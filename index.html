@@ -313,6 +313,22 @@
   <!-- Toast Notification -->
   <div id="toast" class="toast"><span data-i18n="toast_copied">링크가 복사되었습니다.</span></div>
 
+  <!-- Userback Widget -->
+  <script>
+    window.Userback = window.Userback || {};
+    Userback.access_token = "A-sFonUuW02idMC7WnPgh6DyrE8";
+    // identify your logged-in users (optional)
+    Userback.user_data = {
+      id: "123456", // example data
+      info: {
+        name: "someone", // example data
+        email: "someone@example.com" // example data
+      }
+    };
+    (function (d) {
+      var s = d.createElement('script'); s.async = true; s.src = 'https://static.userback.io/widget/v1.js'; (d.head || d.body).appendChild(s);
+    })(document);
+  </script>
   <script src="main.js"></script>
 </body>
 
